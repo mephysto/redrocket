@@ -1,0 +1,37 @@
+
+@import 'base/normalize';
+@import 'base/base';
+
+@import 'tools/mediaqueries';
+@import 'tools/mixins';
+// @import "fontawesome/font-awesome";
+
+html {
+  font-size: 16px;
+  line-height: 1.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Arvo:400,700);
+
+body {
+}
+h1, h2, h3{
+}
+h1 {
+	font-size: 2em;
+	line-height: 1.2;
+	@include fluid-type(600/16 * 1rem, 1080 / 16 * 1rem, 32/16 * 1rem, 64/16 * 1rem);
+}
+.container{
+  font-size: 15px;
+
+  @include media(">phone") {
+  }
+
+	@include media(">tablet") {
+  }
+}
+
+
+
