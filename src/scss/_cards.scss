@@ -1,24 +1,15 @@
-
-.header {
+.card {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 20vh;
-  background: url('../img/header.jpg');
-  background-size: cover;
-}
-
-.card {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 80%;
+  // left: 50%;
+  // top: 50%;
+  width: 100%;
   height: calc(55vh);
   background: $orange;
   border-radius: 10px;
   border: solid 1px $dark-grey;
-  transform: translate3d(-50%, -50%, 0);
+  // transform: translate3d(-50%, -50%, 0);
   overflow: hidden;
   @include mdShadowLevel(2);
 }
@@ -35,6 +26,7 @@
   position: absolute;
   top: 80%;
   width: 100%;
+  max-width: 170px;
   padding: 10px;
 }
 

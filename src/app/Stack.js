@@ -30,12 +30,32 @@ class Stack extends Component {
         <main className="tinderforbananas">
           <section className="view view--swipelist">
             <tinderforbananas-item class="item item--next hidden" inmovable>
-              <picture>
-              </picture>
+              <picture></picture>
               <div className="item__details">
-                <span className="item__details__name"></span>,
+
+                <div className="card">
+                  <div className="card__image"></div>
+                  <div className="card__details">
+                    <h1 className="card__heading">Harissa Vegetable and egg tray bake</h1>
+                    <div className="card__detail card__detail--clock">Est. eat time 7pm</div>
+                    <div className="card__detail card__detail--user">$13</div>
+                  </div>
+                  <div className="profile">
+                    <div className="profile__image"></div>
+                    <div className="profile__details">
+                      <div className="profile__name">Emma</div>
+                      <div className="profile__rating">4.45</div>
+
+                    </div>
+                  </div>
+
+                  {/*<span className="item__details__name"></span>,
+                  <span className="item__details__age"></span>
+                  <span className="item__details__job"></span>*/}
+                </div>
+                {/*<span className="item__details__name"></span>,
                 <span className="item__details__age"></span>
-                <span className="item__details__job"></span>
+                <span className="item__details__job"></span>*/}
               </div>
             </tinderforbananas-item>
             <tinderforbananas-item class="item item--top">

@@ -2,37 +2,45 @@
   const items = [
     {
       id: 0,
-      name: 'Saba',
+      name: 'Harissa Vegetable and egg tray bake',
+      time: 'Est. eat time 7pm',
+      price: '$13',
       age: 25,
       job: 'Phillippines',
-      images: ['images/testpic4.jpg', 'images/testpic2.jpg', 'images/testpic1.jpg'],
+      images: ['images/tray-bake.jpg', 'images/tray-bake.jpg', 'images/tray-bake.jpg'],
       distance: 25,
       description: 'Swipe for me! You’ll find me very ap-peel-ing'
     },
     {
       id: 1,
-      name: 'Plantain',
+      name: 'Harissa Vegetable and egg tray bake',
+      time: 'Est. eat time 7pm',
+      price: '$13',
       age: 28,
       job: 'Nicaragua',
-      images: ['images/testpic2.jpg', 'images/testpic4.jpg'],
+      images: ['images/tray-bake.jpg', 'images/tray-bake.jpg'],
       distance: 4,
       description: 'Lorem ipsum dolor sit amet, quo ad cibo viris legimus, simul delicata constituto per cu. Pro an commodo liberavisse, cu mutat sensibus tractatos est, animal similique ei nec. Et est molestie phaedrum, ut eam quot meliore. Usu hendrerit complectitur at, at iriure habemus facilisis sit. An eos probo graece.Propriae contentiones eu ius, pro eu ignota liberavisse disputationi, duo ea docendi consectetuer. Cum posse semper ea, ius invidunt qualisque scriptorem cu, ullum reprehendunt pro eu. Illud erant reformidans usu in. Ad vim quem choro iracundia. Ius in case mnesarchum.Duis signiferumque sed cu. Ut duo error congue intellegebat, fugit nostrud urbanitas ei has. Copiosae dissentias te eam, dicta efficiendi mea ad. Numquam persequeris te sea, ad populo graeci per, et mea aperiam noluisse interesset.Malorum abhorreant pri eu, no vidit quaeque mei, usu in dico meliore philosophia. Causae verterem pri in, te case suavitate nam. In ius ignota sanctus. Propriae repudiandae ad sit, gubergren ullamcorper usu ei. Ne vis fierent mediocritatem. Id nominati maluisset ius, soluta graece lobortis ut his, vocibus copiosae placerat est ad.Duo alia ferri impetus ei, deleniti scriptorem comprehensam ius an. Mea ne labore oblique adolescens. Ne velit albucius salutatus quo, cum iudico eripuit bonorum ad. Stet suscipit sea ad. Nec prompta suscipit mandamus at.'
     },
     {
       id: 2,
-      name: 'Banan',
+      name: 'Harissa Vegetable and egg tray bake',
+      time: 'Est. eat time 7pm',
+      price: '$13',
       age: 21,
       job: 'Finnland',
-      images: ['images/testpic3.jpg', 'images/testpic2.jpg'],
+      images: ['images/tray-bake.jpg', 'images/tray-bake.jpg'],
       distance: 9,
       description: 'I like fruits!'
     },
     {
       id: 3,
-      name: 'Actually an orange',
+      name: 'Harissa Vegetable and egg tray bake',
+      time: 'Est. eat time 7pm',
+      price: '$13',
       age: 12,
       job: 'Scammer',
-      images: ['images/testpic1.jpg', 'images/testpic2.jpg'],
+      images: ['images/tray-bake.jpg', 'images/tray-bake.jpg'],
       distance: 2455,
       description: 'Follow me on my totally banana-related Instagram 📸'
     }
@@ -53,8 +61,10 @@
     const topR = top.getBoundingClientRect();
     top.style.position = '';
     next.classList.remove('hidden');
-    top.style.top = next.style.top = `${topR.top}px`;
+    // top.style.top = next.style.top = `${topR.top}px`;
+    top.style.top = next.style.top = `10px`;
     top.style.width = next.style.width = `${topR.width}px`;
+    // top.style.width = next.style.width = `80%`;
     top.style.height = next.style.height = `${topR.height}px`;
     top.onResize();
     next.onResize();
@@ -122,7 +132,10 @@
 
     const target = carousel.getBoundingClientRect();
     carousel.style.transformOrigin = 'top left';
-    carousel.style.transform = `scaleX(${start.width/target.width}) scaleY(${start.height/target.height}) translate(${start.left - target.left}px, ${start.top - target.top}px)`;   
+    // const topOffset = start.top - target.top;
+    // const topOffset = 15;
+    // console.log(10);
+    carousel.style.transform = `scaleX(${start.width/target.width}) scaleY(${start.height/target.height}) translate(${start.left - target.left}px, ${start.top - target.top}px)`;
     return requestAnimationFramePromise()
       .then(_ => requestAnimationFramePromise())
       .then(_ => {

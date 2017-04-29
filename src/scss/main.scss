@@ -51,9 +51,10 @@ h2 {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 150px;
+  height: 20vh;
   background: url('../img/header.jpg');
   background-size: cover;
+  z-index: 200;
 }
 
 .search {
