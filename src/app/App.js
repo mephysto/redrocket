@@ -22,7 +22,7 @@ class App extends Component {
           <Route path="/detail" component={Detail} />
           <Route path="/messages" component={Messages} />
           <Route path="/things" component={Things} />
-        </div>       
+        </div>
       </Router>
     );
   }

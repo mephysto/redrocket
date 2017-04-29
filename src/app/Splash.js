@@ -11,7 +11,7 @@ class Landing extends Component {
 
   render() {
     return (
-      <div className="landing-page">
+      <div className="splash-page">
         
         <div className="landing-page__top">
           <div className="landing-page__slide"></div>

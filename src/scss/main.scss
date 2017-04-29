@@ -19,6 +19,7 @@ $orange: #fa7c27;
 
 @import 'tinderstyle';
 @import 'cards';
+@import 'landing-page';
 
 html,
 body {
@@ -54,7 +55,6 @@ h2 {
   background: url('../img/header.jpg');
   background-size: cover;
 }
-
 
 .search {
   display: flex;
