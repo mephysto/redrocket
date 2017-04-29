@@ -22,6 +22,7 @@ $orange: #fa7c27;
 @import 'splash';
 @import 'landing-page';
 @import 'match';
+@import 'messages';
 @import 'profile';
 
 html,
@@ -34,6 +35,7 @@ html {
   line-height: 1.25;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: $green;
 }
 
 body {
@@ -51,8 +53,9 @@ h2 {
 }
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
+  background: $green;
 }
 
 .header {
