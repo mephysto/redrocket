@@ -20,7 +20,7 @@ class App extends Component {
           <Route exact path="/" component={Splash} />
           <Route path="/Landing" component={Landing} />
           <Route path="/Stack" component={Stack} />
-          <Route path="/matchdetail" component={MatchDetail} />
+          <Route path="/match" component={MatchDetail} />
           <Route path="/detail" component={Detail} />
           <Route path="/messages" component={Messages} />
           <Route path="/things" component={Things} />
