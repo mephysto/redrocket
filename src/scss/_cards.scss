@@ -62,8 +62,10 @@
     right: 10px;
   }
 }
-.item__details{
-  > .profile {
+.full-detail{
+  display: flex;
+  justify-content: space-around;
+  .profile {
     position: relative;
   }
 }
