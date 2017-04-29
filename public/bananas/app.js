@@ -122,7 +122,10 @@
 
     const target = carousel.getBoundingClientRect();
     carousel.style.transformOrigin = 'top left';
-    carousel.style.transform = `scaleX(${start.width/target.width}) scaleY(${start.height/target.height}) translate(${start.left - target.left}px, ${start.top - target.top}px)`;   
+    // const topOffset = start.top - target.top;
+    // const topOffset = 15;
+    console.log(10);
+    carousel.style.transform = `scaleX(${start.width/target.width}) scaleY(${start.height/target.height}) translate(${start.left - target.left}px, ${start.top - target.top}px)`;
     return requestAnimationFramePromise()
       .then(_ => requestAnimationFramePromise())
       .then(_ => {
