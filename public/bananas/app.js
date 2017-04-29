@@ -192,10 +192,11 @@
 
   function installServiceWorker() {
     if (!('serviceWorker' in navigator)) return;
-    navigator.serviceWorker.register('sw.js');
+    navigator.serviceWorker.register('./sw.js');
   }
 
   function init() {
+    console.log('init circus')
     const top = document.querySelector('.item--top');
     top.data = dataProvider.next().value;
     top.addEventListener('swipe', updateCards);
@@ -210,5 +211,6 @@
     hookupButtons();
     installServiceWorker();
   }
-  document.addEventListener('DOMContentLoaded', init);
+  // document.addEventListener('DOMContentLoaded', init);
+  init();
 })();

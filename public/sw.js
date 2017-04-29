@@ -1,22 +1,22 @@
 (function () {
   const VERSION = '{%VERSION%}';
   const files = [
-    'images/bigbanan.jpg',
-    'images/banana.png',
-    'images/banana.svg',
-    'images/testpic1.jpg',
-    'images/testpic2.jpg',
-    'images/testpic3.jpg',
-    'images/testpic4.jpg',
-    'app.js',
-    'ce-carousel.js',
-    'ce-details.js',
-    'ce-item.js',
-    'custom-elements.min.js',
-    'helper.js',
+    'bananas/images/bigbanan.jpg',
+    'bananas/images/banana.png',
+    'bananas/images/banana.svg',
+    'bananas/images/testpic1.jpg',
+    'bananas/images/testpic2.jpg',
+    'bananas/images/testpic3.jpg',
+    'bananas/images/testpic4.jpg',
+    'bananas/app.js',
+    'bananas/ce-carousel.js',
+    'bananas/ce-details.js',
+    'bananas/ce-item.js',
+    'bananas/custom-elements.min.js',
+    'bananas/helper.js',
     './',
-    'manifest.json',
-    'styles.css'
+    'bananas/manifest.json',
+    'bananas/styles.css'
   ];
 
   self.oninstall = event => event.waitUntil(

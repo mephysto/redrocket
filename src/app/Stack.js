@@ -9,7 +9,7 @@ class Stack extends Component {
   createScript(url) {
     const script = document.createElement("script");
     script.src = url;
-    script.defer = true;
+    // script.defer = true;
     return script;
   }
   componentDidMount() {
@@ -25,10 +25,9 @@ class Stack extends Component {
       <main className="tinderforbananas">
         <section className="view view--swipelist">
           <header>
-            <p>Tinder for Bananas</p>
-            <p className="copyright">Made with 🍌 by <a href="https://twitter.com/DasSurma">Surma</a>, Code on <a href="https://github.com/surma/tinderforbananas.com">GitHub</a></p>
+            <p>Taste Buds</p>
           </header>
-          <tinderforbananas-item className="item item--next hidden" inmovable>
+          <tinderforbananas-item class="item item--next hidden" inmovable>
             <picture>
             </picture>
             <div className="item__details">
@@ -37,13 +36,30 @@ class Stack extends Component {
               <span className="item__details__job"></span>
             </div>
           </tinderforbananas-item>
-          <tinderforbananas-item className="item item--top">
+          <tinderforbananas-item class="item item--top">
             <picture>
               <div className="action action--nope">Nope</div>
               <div className="action action--like">Like</div>
               <div className="action action--superlike">Super<br />Like</div>
             </picture>
-            <div className="item__details">
+            <div className="card item__details">
+
+              <div className="card">
+                <div className="card__image"></div>
+                <div className="card__details">
+                  <h1 className="card__heading">Harissa Vegetable and egg tray bake</h1>
+                  <div className="card__detail">Est. eat time 7pm</div>
+                  <div className="card__detail">$13</div>
+                </div>
+                <div className="profile">
+                  <div className="profile__image"></div>
+                  <div className="profile__details">
+                    <div className="profile__name">Emma</div>
+                    <div className="profile__rating">4.45</div>
+                  </div>
+                </div>
+              </div>
+
               <span className="item__details__name"></span>,
               <span className="item__details__age"></span>
               <span className="item__details__job"></span>
