@@ -26,10 +26,10 @@ customElements.define('tinderforbananas-details', class extends HTMLElement {
       div.style.backgroundImage = `url('${imgSrc}')`;
       this._carousel.appendChild(div);
     }
-    this.querySelector('.item__details__name').textContent = this.data.name;
-    this.querySelector('.item__details__age').textContent = this.data.age;
-    this.querySelector('.item__details__job').textContent = this.data.job;
-    this.querySelector('.item__details__distance').textContent = `${this.data.distance} miles away`;
-    this.querySelector('.description').textContent = this.data.description;
+    // this.querySelector('.item__details__name').textContent = this.data.name;
+    // this.querySelector('.item__details__age').textContent = this.data.age;
+    // this.querySelector('.item__details__job').textContent = this.data.job;
+    // this.querySelector('.item__details__distance').textContent = `${this.data.distance} miles away`;
+    // this.querySelector('.description').textContent = this.data.description;
   }
 });

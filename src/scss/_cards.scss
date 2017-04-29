@@ -37,6 +37,17 @@
   color: $black;
 }
 
+.card__detail--clock {
+  margin-right: 20px;
+  background: url('../img/clock.png') no-repeat;
+  background-size: 15px 15px;
+}
+
+.card__detail--user {
+  background: url('../img/user.png') no-repeat;
+  background-size: 15px 15px;
+}
+
 .card__heading {
   font-size: 14px;
   line-height: 1.3;
@@ -50,3 +61,4 @@
   right: 10px;
   z-index: 10;
 }
+

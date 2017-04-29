@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
 
+import GSAP from 'react-gsap-enhancer';
+import {TimelineMax} from 'gsap';
+
 class Landing extends Component {
   constructor(props) {
     super(props);
     this.state = {
     };
+    this.moveAnimation = this.moveAnimation.bind(this);
   }
-
-  
-
+  moveAnimation() {
+    return new TimelineMax()
+      .fromTo('.landing-page__top .landing-page__slide', 2, {x:0}, {x:-200}, 0)
+    ;;
+  }
   render() {
     return (
-      <div className="landing-page">
+      <div className="landing-page" onClick={this.moveAnimation}>
         
         <div className="landing-page__top">
           <div className="landing-page__slide"></div>
@@ -35,4 +41,4 @@ class Landing extends Component {
   }
 }
 
-export default Landing;
+export default GSAP()(Landing);
