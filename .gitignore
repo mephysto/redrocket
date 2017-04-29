@@ -1,5 +1,8 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+src/styles/global.min.css
+src/styles/global.min.css.map
+
 # dependencies
 /node_modules
 
