@@ -48,7 +48,7 @@
 
   const dataProvider = (function* () {
     while (true) {
-      yield *items;
+      yield* items;
     }
   })();
 
@@ -83,7 +83,7 @@
 
   function hookupButtons() {
     const details = document.querySelector('.view--details');
-    document.querySelectorAll('.control--like').forEach(btn => 
+    document.querySelectorAll('.control--like').forEach(btn =>
       btn.addEventListener('click', _ => {
         let p = Promise.resolve();
         if (!details.classList.contains('hidden')) {
@@ -101,7 +101,7 @@
         p.then(_ => document.querySelector('.item--top').nope());
       })
     );
-    document.querySelectorAll('.control--superlike').forEach(btn => 
+    document.querySelectorAll('.control--superlike').forEach(btn =>
       btn.addEventListener('click', _ => {
         let p = Promise.resolve();
         if (!details.classList.contains('hidden')) {
@@ -119,14 +119,14 @@
     const details = document.querySelector('.view--details');
     const detailsText1 = details.querySelector('.item__details');
     const detailsText2 = details.querySelector('.description');
-    const detailsNav = details.querySelector('nav');
+    // const detailsNav = details.querySelector('nav');
     const carousel = document.querySelector('tinderforbananas-carousel');
     const image = document.querySelector('.view--swipelist .item--top picture');
     details.querySelector('tinderforbananas-details').data = data;
 
     // Let’s do FLIP!
     const start = image.getBoundingClientRect();
-    
+    document.querySelector('.tinderforbananas').classList.add('active');
     swipelist.classList.add('overlaid');
     details.classList.remove('hidden');
 
@@ -135,7 +135,7 @@
     // const topOffset = start.top - target.top;
     // const topOffset = 15;
     // console.log(10);
-    carousel.style.transform = `scaleX(${start.width/target.width}) scaleY(${start.height/target.height}) translate(${start.left - target.left}px, ${start.top - target.top}px)`;
+    carousel.style.transform = `scaleX(${start.width / target.width}) scaleY(${start.height / target.height}) translate(${start.left - target.left}px, ${start.top - target.top}px)`;
     return requestAnimationFramePromise()
       .then(_ => requestAnimationFramePromise())
       .then(_ => {
@@ -143,7 +143,7 @@
         carousel.style.transform = 'initial';
         detailsText1.style.transform = 'initial';
         detailsText2.style.transform = 'initial';
-        detailsNav.style.transform = 'initial';
+        // detailsNav.style.transform = 'initial';
         return transitionEndPromise(carousel);
       })
       .then(_ => {
@@ -159,7 +159,7 @@
     const details = document.querySelector('.view--details');
     const detailsText1 = details.querySelector('.item__details');
     const detailsText2 = details.querySelector('.description');
-    const detailsNav = details.querySelector('nav');
+    // const detailsNav = details.querySelector('nav');
     const carousel = document.querySelector('tinderforbananas-carousel');
     const item = document.querySelector('.view--swipelist .item--top');
     const image = document.querySelector('.view--swipelist .item--top picture');
@@ -167,10 +167,12 @@
     item.selected = event && event.detail.selected || 0;
 
     const start = carousel.getBoundingClientRect();
+    document.querySelector('.tinderforbananas').classList.remove('active');
     swipelist.classList.remove('overlaid');
     details.classList.add('hidden');
     const target = image.getBoundingClientRect();
     swipelist.classList.add('overlaid');
+    document.querySelector('.tinderforbananas').classList.add('active');
     details.classList.remove('hidden');
 
     item.style.overflow = 'visible';
@@ -179,10 +181,10 @@
     return requestAnimationFramePromise()
       .then(_ => requestAnimationFramePromise())
       .then(_ => {
-        carousel.style.transform = `scaleX(${target.width/start.width}) scaleY(${target.height/start.height}) translate(${target.left - start.left}px, ${target.top - start.top}px)`;   
+        carousel.style.transform = `scaleX(${target.width / start.width}) scaleY(${target.height / start.height}) translate(${target.left - start.left}px, ${target.top - start.top}px)`;
         detailsText1.style.transform = '';
         detailsText2.style.transform = '';
-        detailsNav.style.transform = '';
+        // detailsNav.style.transform = '';
         return transitionEndPromise(carousel);
       })
       .then(_ => {
@@ -191,16 +193,17 @@
         carousel.style.transformOrigin = '';
         item.style.overflow = 'hidden';
         details.classList.add('hidden');
+        document.querySelector('.tinderforbananas').classList.remove('active');
         swipelist.classList.remove('overlaid');
       });
   }
 
   function copyControls() {
-    document.querySelectorAll('.view--details .control').forEach(btn => {
-      const actionName = Array.from(btn.classList).find(name => /(like|nope)/.test(name));
-      const svg = document.querySelector(`.view--swipelist .${actionName} svg`).cloneNode(true);
-      btn.appendChild(svg);
-    });
+    // document.querySelectorAll('.view--details .control').forEach(btn => {
+    // const actionName = Array.from(btn.classList).find(name => /(like|nope)/.test(name));
+    // const svg = document.querySelector(`.view--swipelist .${actionName} svg`).cloneNode(true);
+    // btn.appendChild(svg);
+    // });
   }
 
   function installServiceWorker() {
@@ -209,7 +212,7 @@
   }
 
   function init() {
-    console.log('init circus')
+    // console.log('init circus')
     const top = document.querySelector('.item--top');
     top.data = dataProvider.next().value;
     top.addEventListener('swipe', updateCards);
@@ -224,6 +227,9 @@
     hookupButtons();
     installServiceWorker();
   }
-  // document.addEventListener('DOMContentLoaded', init);
-  init();
+  if (/comp|inter|loaded/.test(document.readyState)) {
+    init();
+  } else {
+    document.addEventListener('DOMContentLoaded', init, false);
+  }
 })();

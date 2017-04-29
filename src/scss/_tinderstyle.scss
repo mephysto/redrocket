@@ -323,3 +323,20 @@ tinderforbananas-carousel .carousel__item {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+.tinderforbananas.active {
+  top: 0;
+  z-index: 300;
+  .item__details{
+    width: 100%;
+    left: 0;
+    top: 50%;
+  }
+  .view--details{
+    .description{
+      background: #f97c26;
+    }
+  }
+  .view--details__controls{
+    display: none;
+  }
+}
