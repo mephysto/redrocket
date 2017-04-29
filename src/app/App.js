@@ -6,6 +6,7 @@ import Footer from './Footer';
 
 
 import Landing from './Landing';
+import Stack from './Stack';
 import MatchDetail from './MatchDetail';
 import Messages from './Messages';
 import Detail from './Detail';
@@ -20,6 +21,7 @@ class App extends Component {
         <div>
           <Header />
           <Route exact path="/" component={Landing} />
+          <Route path="/Stack" component={Stack} />
           <Route path="/matchdetail" component={MatchDetail} />
           <Route path="/detail" component={Detail} />
           <Route path="/messages" component={Messages} />
