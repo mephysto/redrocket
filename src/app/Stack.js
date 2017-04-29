@@ -9,12 +9,16 @@ class Stack extends Component {
     super(props);
     this.state = {
     };
+    this.toMatchPage = this.toMatchPage.bind(this);
   }
   createScript(url) {
     const script = document.createElement("script");
     script.src = url;
     // script.defer = true;
     return script;
+  }
+  toMatchPage(){
+    console.log('cicked');
   }
   componentDidMount() {
     document.body.appendChild(this.createScript("bananas/custom-elements.min.js"));
@@ -73,7 +77,7 @@ class Stack extends Component {
               {/* profile imags will go here */}
               <section className="item__details full-detail">
                 <CardProfile image="img/emma.jpg"/>
-                <CardProfile image="img/cross.png"/>
+                <CardProfile image="img/cross.png" onClick={this.toMatchPage}/>
               </section>
               {/* sustainability data here*/}
               <section className="description">
