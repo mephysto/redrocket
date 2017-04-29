@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+import Splash from './Splash';
 import Landing from './Landing';
 import Stack from './Stack';
 import MatchDetail from './MatchDetail';
@@ -16,7 +17,8 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Route exact path="/" component={Landing} />
+          <Route exact path="/" component={Splash} />
+          <Route path="/Landing" component={Landing} />
           <Route path="/Stack" component={Stack} />
           <Route path="/matchdetail" component={MatchDetail} />
           <Route path="/detail" component={Detail} />
