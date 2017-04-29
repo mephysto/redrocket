@@ -1,0 +1,43 @@
+.match__container {
+  background-image: url('../img/match-bg.jpg');
+  background-size: cover;
+}
+
+.match__heading {
+  padding: 100px 0 50px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.match__button {
+  padding: 10px 20px;
+  margin: 30px auto;
+  width: 200px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 900;
+  border-radius: 30px;
+  background: $green;
+}
+
+.match__menu,
+.match__time {
+  margin: 0 auto 30px auto;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 300;
+  span {
+    display: inline-block;
+    padding: 10px 0 0 0;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+}
+
+.matches {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+}
