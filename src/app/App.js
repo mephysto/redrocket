@@ -10,7 +10,7 @@ import MatchDetail from './MatchDetail';
 import Detail from './Detail';
 
 // import logo from '../logo.svg';
-import '../App.css';
+import '../styles/global.min.css';
 
 class App extends Component {
   render() {
