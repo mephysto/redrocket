@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+var Hammer = require('react-hammerjs');
 
 import Header from './Header';
 import CardProfile from './CardProfile';
@@ -10,14 +11,27 @@ class Stack extends Component {
     this.state = {
     };
     this.toMatchPage = this.toMatchPage.bind(this);
+    this.handleTap = this.handleTap.bind(this);
+    this.options = {
+      touchAction: 'compute',
+      recognizers: {
+        tap: {
+          time: 600,
+          threshold: 100
+        }
+      }
+    }
   }
   createScript(url) {
     const script = document.createElement("script");
     script.src = url;
     return script;
   }
-  toMatchPage(){
+  toMatchPage() {
     window.location = '/match';
+  }
+  handleTap() {
+    console.log('tapped dat');
   }
   componentDidMount() {
     document.body.appendChild(this.createScript("bananas/custom-elements.min.js"));
@@ -62,7 +76,7 @@ class Stack extends Component {
                     <div className="card__detail card__detail--clock">Est. eat time 7pm</div>
                     <div className="card__detail card__detail--user">$13</div>
                   </div>
-                  <CardProfile image="img/emma.jpg"/>
+                  <CardProfile image="img/emma.jpg" />
                   <span className="item__details__name"></span>,
                   <span className="item__details__age"></span>
                   <span className="item__details__job"></span>
@@ -75,13 +89,16 @@ class Stack extends Component {
               <tinderforbananas-carousel></tinderforbananas-carousel>
               {/* profile imags will go here */}
               <section className="item__details full-detail">
-                <CardProfile image="img/emma.jpg"/>
-                <CardProfile image="img/cross.png" onClick={this.toMatchPage}/>
+                <CardProfile image="img/emma.jpg" />
+                <CardProfile image="img/cross.png" onClick={this.toMatchPage} />
               </section>
               {/* sustainability data here*/}
               <section className="description">
+                <Hammer className="recipestats" onTap={this.handleTap} options={this.options}>
+                  <div>Tap Me</div>
+                </Hammer>
                 <div>
-                  <img src="http://placehold.it/280x100" alt="carousel 1"/>
+                  <img src="http://placehold.it/280x100" alt="carousel 1" />
                 </div>
               </section>
             </tinderforbananas-details>
