@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 
 import Header from './Header';
+import CardProfile from './CardProfile';
 
 class Stack extends Component {
   constructor(props) {
@@ -40,22 +41,8 @@ class Stack extends Component {
                     <div className="card__detail card__detail--clock">Est. eat time 7pm</div>
                     <div className="card__detail card__detail--user">$13</div>
                   </div>
-                  <div className="profile">
-                    <div className="profile__image"></div>
-                    <div className="profile__details">
-                      <div className="profile__name">Emma</div>
-                      <div className="profile__rating">4.45</div>
-
-                    </div>
-                  </div>
-
-                  {/*<span className="item__details__name"></span>,
-                  <span className="item__details__age"></span>
-                  <span className="item__details__job"></span>*/}
+                  <CardProfile />
                 </div>
-                {/*<span className="item__details__name"></span>,
-                <span className="item__details__age"></span>
-                <span className="item__details__job"></span>*/}
               </div>
             </tinderforbananas-item>
             <tinderforbananas-item class="item item--top">
@@ -72,15 +59,7 @@ class Stack extends Component {
                     <div className="card__detail card__detail--clock">Est. eat time 7pm</div>
                     <div className="card__detail card__detail--user">$13</div>
                   </div>
-                  <div className="profile">
-                    <div className="profile__image"></div>
-                    <div className="profile__details">
-                      <div className="profile__name">Emma</div>
-                      <div className="profile__rating">4.45</div>
-
-                    </div>
-                  </div>
-
+                  <CardProfile />                  
                   <span className="item__details__name"></span>,
                   <span className="item__details__age"></span>
                   <span className="item__details__job"></span>
@@ -93,10 +72,8 @@ class Stack extends Component {
               <tinderforbananas-carousel></tinderforbananas-carousel>
               {/* profile imags will go here */}
               <section className="item__details">
-                <span className="item__details__name"></span>,
-                <span className="item__details__age"></span>
-                <span className="item__details__job"></span>
-                <span className="item__details__distance"></span>
+                <CardProfile />
+                <CardProfile />
               </section>
               {/* sustainability data here*/}
               <section className="description">
