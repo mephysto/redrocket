@@ -14,11 +14,10 @@ class Stack extends Component {
   createScript(url) {
     const script = document.createElement("script");
     script.src = url;
-    // script.defer = true;
     return script;
   }
   toMatchPage(){
-    console.log('cicked');
+    window.location = '/match';
   }
   componentDidMount() {
     document.body.appendChild(this.createScript("bananas/custom-elements.min.js"));

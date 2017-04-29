@@ -6,6 +6,9 @@ class MatchDetail extends Component {
     this.state = {
     };
   }
+  toNextPage(){
+    window.location = '/messages';
+  }
   render() {
     return (
       <div className="container match__container">
@@ -26,7 +29,7 @@ class MatchDetail extends Component {
             </div>
           </div>
         </div>
-        <div className="match__button">Get Started</div>
+        <div className="match__button" onClick={this.toNextPage}>Get Started</div>
         <div className="match__menu">
           What's on the menu:<br />
           <span>Harissa Vegetable<br />and Egg Tray Bake</span>

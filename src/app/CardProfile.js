@@ -9,7 +9,7 @@ class CardProfile extends Component {
   }
   render() {
     return (
-      <div className="profile">
+      <div className="profile" onClick={this.props.onClick}>
         <div className="profile__image" style={{ backgroundImage: 'url(' + this.state.image + ')' }}></div>
         <div className="profile__details">
           <div className="profile__name">Emma</div>

@@ -8,16 +8,19 @@ class Landing extends Component {
     super(props);
     this.state = {
     };
-    this.moveAnimation = this.moveAnimation.bind(this);
+    // this.moveAnimation = this.moveAnimation.bind(this);
   }
-  moveAnimation() {
-    return new TimelineMax()
+  componentDidMount() {
+    new TimelineMax()
       .fromTo('.landing-page__top .landing-page__slide', 2, {x:0}, {x:-200}, 0)
-    ;;
+    ;
+  }
+  toNextPage(){
+    window.location = '/stack';
   }
   render() {
     return (
-      <div className="landing-page" onClick={this.moveAnimation}>
+      <div className="landing-page" onClick={this.toNextPage}>
         
         <div className="landing-page__top">
           <div className="landing-page__slide"></div>

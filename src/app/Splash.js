@@ -5,11 +5,16 @@ class Splash extends Component {
     super(props);
     this.state = {
     };
+    this.toNextPage = this.toNextPage.bind(this);
   }
 
+  toNextPage(){
+    console.log('cicked');
+    window.location = '/landing';
+  }
   render() {
     return (
-      <div className="splash">
+      <div className="splash" onClick={this.toNextPage}>
       </div>
     );
   }
