@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-var Hammer = require('react-hammerjs');
 
 import Header from './Header';
 import CardProfile from './CardProfile';
+import RecipeStats from './RecipeStats';
 
 class Stack extends Component {
   constructor(props) {
@@ -11,27 +11,17 @@ class Stack extends Component {
     this.state = {
     };
     this.toMatchPage = this.toMatchPage.bind(this);
-    this.handleTap = this.handleTap.bind(this);
-    this.options = {
-      touchAction: 'compute',
-      recognizers: {
-        tap: {
-          time: 600,
-          threshold: 100
-        }
-      }
-    }
   }
   createScript(url) {
     const script = document.createElement("script");
     script.src = url;
     return script;
   }
+  refreshpage() {
+    window.location = '/stack';
+  }
   toMatchPage() {
     window.location = '/match';
-  }
-  handleTap() {
-    console.log('tapped dat');
   }
   componentDidMount() {
     document.body.appendChild(this.createScript("bananas/custom-elements.min.js"));
@@ -85,31 +75,21 @@ class Stack extends Component {
             </tinderforbananas-item>
           </section>
           <section className="view view--details hidden">
+            <div className="view__details--words">
+              <h1 className="view__heading">Harissa Vegetable and egg tray bake</h1>
+              <div className="view__detail view__detail--clock">Est. eat time 7pm</div>
+              <div className="view__detail view__detail--user">$13</div>
+            </div>
             <tinderforbananas-details>
               <tinderforbananas-carousel></tinderforbananas-carousel>
               {/* profile imags will go here */}
               <section className="item__details full-detail">
-                <CardProfile image="img/emma.jpg" />
+                <CardProfile image="img/emma.jpg"  onClick={this.refreshpage} />
                 <CardProfile image="img/cross.png" onClick={this.toMatchPage} />
               </section>
               {/* sustainability data here*/}
-              <section className="description">
-                <Hammer className="recipestats" onTap={this.handleTap} options={this.options}>
-                  <div>Tap Me</div>
-                </Hammer>
-                <div>
-                  <img src="http://placehold.it/280x100" alt="carousel 1" />
-                </div>
-              </section>
+              <RecipeStats />
             </tinderforbananas-details>
-            <nav className="view--details__controls">
-              <button className="control control--big control--nope control--inverted">
-              </button>
-              <button className="control control--big control--superlike control--inverted">
-              </button>
-              <button className="control control--big control--like control--inverted">
-              </button>
-            </nav>
           </section>
         </main>
       </div>
