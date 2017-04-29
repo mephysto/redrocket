@@ -49,13 +49,13 @@ class Stack extends Component {
                     </div>
                   </div>
 
-                  <span className="item__details__name"></span>,
+                  {/*<span className="item__details__name"></span>,
                   <span className="item__details__age"></span>
-                  <span className="item__details__job"></span>
+                  <span className="item__details__job"></span>*/}
                 </div>
-                <span className="item__details__name"></span>,
+                {/*<span className="item__details__name"></span>,
                 <span className="item__details__age"></span>
-                <span className="item__details__job"></span>
+                <span className="item__details__job"></span>*/}
               </div>
             </tinderforbananas-item>
             <tinderforbananas-item class="item item--top">

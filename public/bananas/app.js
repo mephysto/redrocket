@@ -2,7 +2,9 @@
   const items = [
     {
       id: 0,
-      name: 'Saba',
+      name: 'Harissa Vegetable and egg tray bake',
+      time: 'Est. eat time 7pm',
+      price: '$13',
       age: 25,
       job: 'Phillippines',
       images: ['images/tray-bake.jpg', 'images/tray-bake.jpg', 'images/tray-bake.jpg'],
@@ -11,7 +13,9 @@
     },
     {
       id: 1,
-      name: 'Plantain',
+      name: 'Harissa Vegetable and egg tray bake',
+      time: 'Est. eat time 7pm',
+      price: '$13',
       age: 28,
       job: 'Nicaragua',
       images: ['images/tray-bake.jpg', 'images/tray-bake.jpg'],
@@ -20,7 +24,9 @@
     },
     {
       id: 2,
-      name: 'Banan',
+      name: 'Harissa Vegetable and egg tray bake',
+      time: 'Est. eat time 7pm',
+      price: '$13',
       age: 21,
       job: 'Finnland',
       images: ['images/tray-bake.jpg', 'images/tray-bake.jpg'],
@@ -29,7 +35,9 @@
     },
     {
       id: 3,
-      name: 'Actually an orange',
+      name: 'Harissa Vegetable and egg tray bake',
+      time: 'Est. eat time 7pm',
+      price: '$13',
       age: 12,
       job: 'Scammer',
       images: ['images/tray-bake.jpg', 'images/tray-bake.jpg'],
