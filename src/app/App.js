@@ -7,6 +7,7 @@ import Footer from './Footer';
 
 import Landing from './Landing';
 import MatchDetail from './MatchDetail';
+import Messages from './Messages';
 import Detail from './Detail';
 
 // import logo from '../logo.svg';
@@ -21,6 +22,7 @@ class App extends Component {
           <Route exact path="/" component={Landing} />
           <Route path="/matchdetail" component={MatchDetail} />
           <Route path="/detail" component={Detail} />
+          <Route path="/messages" component={Messages} />
           <Footer /> 
         </div>       
       </Router>
