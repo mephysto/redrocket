@@ -5,7 +5,7 @@ import Splash from './Splash';
 import Landing from './Landing';
 import Stack from './Stack';
 import MatchDetail from './MatchDetail';
-import Messages from './Messages';
+import Eating from './Eating';
 import Detail from './Detail';
 import Things from './Things';
 
@@ -22,7 +22,7 @@ class App extends Component {
           <Route path="/Stack" component={Stack} />
           <Route path="/match" component={MatchDetail} />
           <Route path="/detail" component={Detail} />
-          <Route path="/messages" component={Messages} />
+          <Route path="/Eating" component={Eating} />
           <Route path="/things" component={Things} />
         </div>
       </Router>

@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-
 import Hammer from 'react-hammerjs';
 
-class RecipeStats extends Component {
+import Messages from './Messages';
+import Discussion from './Discussion';
+
+class Eating extends Component {
   constructor(props) {
     super(props);
     this.handleTap = this.handleTap.bind(this);
     this.onSwipe = this.onSwipe.bind(this);
     this.onPan = this.onPan.bind(this);
     this.transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
-    this.paneWidth = 384;
+    this.paneWidth = 414;
     this.currentPane = 0;
     this.paneCount = 0;
     this.options = {
@@ -23,11 +25,11 @@ class RecipeStats extends Component {
     }
   }
   componentDidMount() {
-    const stats = document.querySelector('.recipestats ul');
-    document.querySelector('.recipestats ul').addEventListener(this.transitionEnd, (ev) => {
-      document.querySelector('.recipestats ul').removeClass('transition');
+    const stats = document.querySelector('.eating__wrapper');
+    document.querySelector('.eating__wrapper').addEventListener(this.transitionEnd, (ev) => {
+      document.querySelector('.eating__wrapper').removeClass('transition');
     });
-    const stat = document.querySelectorAll('.recipestat');
+    const stat = document.querySelectorAll('.eating__wrapper > div');
     const statcount = [].slice.call(stat).length
     this.paneCount = statcount;
     const fullWidth = [].slice.call(stat).length * this.paneWidth;
@@ -57,12 +59,12 @@ class RecipeStats extends Component {
   }
   setContainerOffsetX(offsetX, doTransition) {
     if (doTransition) {
-      document.querySelector('.recipestats ul').classList.add('transition');
+      document.querySelector('.eating__wrapper').classList.add('transition');
     }
-    document.querySelector('.recipestats ul').style.left = `${offsetX}px`;
+    document.querySelector('.eating__wrapper').style.left = `${offsetX}px`;
   }
   outOfBound() {
-    var left = parseInt(document.querySelector('.recipestats ul').style.left, 10);
+    var left = parseInt(document.querySelector('.eating__wrapper').style.left, 10);
     return ( this.currentPane === 0 && left >= 0) ||
       ( this.currentPane === this.paneCount - 1 && left <= -this.paneWidth * (this.paneCount - 1));
   }
@@ -105,25 +107,21 @@ class RecipeStats extends Component {
   }
   render() {
     return (
-      <section className="description">
+      <div className="container">
+        <div className="messages__header">
+          <h1 className="messages__heading">Harissa Vegetable and egg tray bake</h1>
+          <div className="messages__detail messages__detail--clock">Est. eat time 7pm</div>
+          <div className="messages__detail messages__detail--user">$13</div>
+        </div>
         <Hammer onTap={this.handleTap} onSwipe={this.onSwipe} onPan={this.onPan} onPanEnd={this.onPan} onPanCancel={this.onPan} options={this.options} direction="DIRECTION_HORIZONTAL">
-          <div className="recipestats">
-            <ul>
-              <li className="recipestat">
-                <img src="http://placehold.it/384x200/ff0000/black" alt="carousel 1" />
-              </li>
-              <li className="recipestat">
-                <img src="http://placehold.it/384x200/ff00ff/black" alt="carousel 1" />
-              </li>
-              <li className="recipestat">
-                <img src="http://placehold.it/384x200/ffff00/black" alt="carousel 1" />
-              </li>
-            </ul>
+          <div className="eating__wrapper">
+            <Messages />
+            <Discussion />
           </div>
         </Hammer>
-      </section>
+      </div>
     );
   }
 }
 
-export default RecipeStats;
+export default Eating;

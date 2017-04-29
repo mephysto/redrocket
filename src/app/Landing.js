@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import GSAP from 'react-gsap-enhancer';
 import {TimelineMax} from 'gsap';
+import {Power0, Power4} from 'gsap';
 
 class Landing extends Component {
   constructor(props) {
@@ -11,8 +12,15 @@ class Landing extends Component {
     // this.moveAnimation = this.moveAnimation.bind(this);
   }
   componentDidMount() {
+    new TimelineMax({
+      repeat: -1
+    })
+      .fromTo('.landing-page__top .landing-page__slide', 60, {backgroundPositionX: "0px"}, {backgroundPositionX: "-1000px", ease:Power0.easeNone}, 0)
+      .fromTo('.landing-page__bottom .landing-page__slide', 60, {backgroundPositionX: "0px"}, {backgroundPositionX: "1000px", ease:Power0.easeNone}, 0)
+    ;
     new TimelineMax()
-      .fromTo('.landing-page__top .landing-page__slide', 2, {x:0}, {x:-200}, 0)
+      .fromTo('.landing-page__arrow--left', 2, {x:-400}, {x:-50, ease:Power4.easeOut}, 0)
+      .fromTo('.landing-page__arrow--right', 2, {x:400, y: 55}, {x:50, ease:Power4.easeOut}, 0.1)
     ;
   }
   toNextPage(){

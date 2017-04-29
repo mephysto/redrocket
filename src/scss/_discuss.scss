@@ -1,0 +1,21 @@
+.discussion__container{
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+.dcard__stack{
+  position: relative;
+  width: 375px;
+  > div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: #f97c26;
+    width: 375px;
+    height: 450px;
+    border-radius: 10px;
+    @include mdShadowLevel(2);
+  }
+}

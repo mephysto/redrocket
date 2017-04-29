@@ -7,7 +7,7 @@ class MatchDetail extends Component {
     };
   }
   toNextPage(){
-    window.location = '/messages';
+    window.location = '/eating';
   }
   render() {
     return (
