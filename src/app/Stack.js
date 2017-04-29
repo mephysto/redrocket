@@ -44,26 +44,27 @@ class Stack extends Component {
                 <div className="action action--like">Like</div>
                 <div className="action action--superlike">Super<br />Like</div>
               </picture>
-              <div className="card item__details">
-              <div className="card">
-                <div className="card__image"></div>
-                <div className="card__details">
-                  <h1 className="card__heading">Harissa Vegetable and egg tray bake</h1>
-                  <div className="card__detail card__detail--clock">Est. eat time 7pm</div>
-                  <div className="card__detail card__detail--user">$13</div>
-                </div>
-                <div className="profile">
-                  <div className="profile__image"></div>
-                  <div className="profile__details">
-                    <div className="profile__name">Emma</div>
-                    <div className="profile__rating">4.45</div>
-
+              <div className="item__details">
+                <div className="card">
+                  <div className="card__image"></div>
+                  <div className="card__details">
+                    <h1 className="card__heading">Harissa Vegetable and egg tray bake</h1>
+                    <div className="card__detail card__detail--clock">Est. eat time 7pm</div>
+                    <div className="card__detail card__detail--user">$13</div>
                   </div>
-                </div>
+                  <div className="profile">
+                    <div className="profile__image"></div>
+                    <div className="profile__details">
+                      <div className="profile__name">Emma</div>
+                      <div className="profile__rating">4.45</div>
 
-                <span className="item__details__name"></span>,
-                <span className="item__details__age"></span>
-                <span className="item__details__job"></span>
+                    </div>
+                  </div>
+
+                  <span className="item__details__name"></span>,
+                  <span className="item__details__age"></span>
+                  <span className="item__details__job"></span>
+                </div>
               </div>
             </tinderforbananas-item>
             <nav className="view--swipelist__controls">
