@@ -19,3 +19,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+styles/global.min.css
+styles/global.min.map

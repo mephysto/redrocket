@@ -55,20 +55,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  // font-family: 'Nunito Sans', sans-serif;
-  // font-size: calc(var(--app__font__size) * 100vh);
-  // color: var(--app__text__color);
-  // background-color: var(--device_background-color);
+
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: calc(var(--app__font__size) * 100vh);
+  color: var(--app__text__color);
+  background-color: var(--device_background-color);
 }
 .tinderforbananas {
   position: relative;
   display: flex;
   height: 100%;
   width: calc(var(--device__aspect-ratio) * 100vh);
-  max-width: 100vw;
+  max-width: calc(var(--device__aspect-ratio) * 100vh);
   flex-direction: column;
-  // background-color: var(--app__background__color);
-  height: 100vh;
+  background-color: var(--app__background__color);
+
   overflow: hidden;
 }
 .tinderforbananas header {
@@ -151,7 +152,6 @@ body {
   will-change: opacity;
   opacity: 0;
   user-select: none;
-  z-index: 1000;
 }
 .tinderforbananas .view--swipelist .item .action--nope {
   right: calc(var(--app__action__offset) * 100vh);
@@ -181,6 +181,9 @@ body {
 .tinderforbananas .view--swipelist nav {
   opacity: 1;
   transition: opacity 0.15s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 .tinderforbananas .view--swipelist.overlaid picture {
@@ -200,7 +203,6 @@ body {
 }
 .tinderforbananas .view--swipelist__controls {
   margin-top: auto;
-  opacity: 0.1;
 }
 .tinderforbananas .view--swipelist__controls,
 .tinderforbananas .view--details__controls {
