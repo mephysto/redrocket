@@ -15,6 +15,14 @@ import Detail from './Detail';
 import '../App.css';
 
 class App extends Component {
+  componentWillMount() {
+    const script = document.createElement("script");
+
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+  }
   render() {
     return (
       <Router>
@@ -25,8 +33,8 @@ class App extends Component {
           <Route path="/matchdetail" component={MatchDetail} />
           <Route path="/detail" component={Detail} />
           <Route path="/messages" component={Messages} />
-          <Footer /> 
-        </div>       
+          <Footer />
+        </div>
       </Router>
     );
   }
