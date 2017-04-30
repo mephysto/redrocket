@@ -124,12 +124,14 @@
     flex-grow: 1;
     // padding: calc(var(--app__item__details__padding) * 100vh);
     width: 100%;
-    max-width: 366px;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
     min-width: 300px;
+}
+.tinderforbananas .view--swipelist .item__details {
+    max-width: 366px;
 }
 
 .tinderforbananas .view--details .item__details {
@@ -375,7 +377,7 @@ tinderforbananas-item{
   .item__details {
     width: 100%;
     left: 0;
-    top: 50%;
+    top: 48%;
   }
   .view--details {
       background: rgba(#000000, 0.5);

@@ -48,7 +48,7 @@ class Stack extends Component {
                     <div className="card__detail card__detail--clock">Est. eat time 7pm</div>
                     <div className="card__detail card__detail--user">$13</div>
                   </div>
-                  <CardProfile />
+                  <CardProfile image="img/emma.jpg" name="Emma" rating="4.45"/>
                 </div>
               </div>
             </tinderforbananas-item>
@@ -66,7 +66,7 @@ class Stack extends Component {
                     <div className="card__detail card__detail--clock">Est. eat time 7pm</div>
                     <div className="card__detail card__detail--user">$13</div>
                   </div>
-                  <CardProfile image="img/emma.jpg" />
+                  <CardProfile image="img/emma.jpg" name="Emma" rating="4.45"/>
                   <span className="item__details__name"></span>,
                   <span className="item__details__age"></span>
                   <span className="item__details__job"></span>
@@ -84,8 +84,8 @@ class Stack extends Component {
               <tinderforbananas-carousel></tinderforbananas-carousel>
               {/* profile imags will go here */}
               <section className="item__details full-detail">
-                <CardProfile image="img/emma.jpg" onClick={this.refreshpage} />
-                <CardProfile image="img/cross.png" onClick={this.toMatchPage} />
+                <CardProfile image="img/emma.jpg" onClick={this.refreshpage} name="Emma" rating="4.45"/>
+                <CardProfile image="img/cross.png" onClick={this.toMatchPage} name="Join" rating="" />
               </section>
               {/* sustainability data here*/}
               <RecipeStats />

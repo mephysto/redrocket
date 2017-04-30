@@ -1,6 +1,6 @@
 .recipestats{
   // background: crimson;
-  height: 200px;
+  height: 215px;
   width: 100%;
   overflow: hidden;
   ul{
@@ -14,8 +14,13 @@
   li{ 
     float: left;
     height: 100%;
-    width: 384px;
+    width: 354px;
+    height: 215px;
     // background: #bada55;
+  }
+  img{
+    max-width: 100%;
+    height: auto;
   }
 }
 

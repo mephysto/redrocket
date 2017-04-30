@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import CardProfile from './CardProfile';
 class MatchDetail extends Component {
   constructor(props) {
     super(props);
@@ -14,20 +15,8 @@ class MatchDetail extends Component {
       <div className="container match__container">
         <h1 className="match__heading">It's a Match!</h1>
         <div className="matches">
-          <div className="profile">
-            <div className="profile__image"></div>
-            <div className="profile__details">
-              <div className="profile__name">Emma</div>
-              <div className="profile__rating">4.45</div>
-            </div>
-          </div>
-          <div className="profile">
-            <div className="profile__image"></div>
-            <div className="profile__details">
-              <div className="profile__name">Emma</div>
-              <div className="profile__rating">4.45</div>
-            </div>
-          </div>
+          <CardProfile image="img/emma.jpg" name="Emma" rating="4.45"/>
+          <CardProfile image="img/chris.jpg" name="Chris" rating="4.74"/>
         </div>
         <div className="match__button" onClick={this.toNextPage}>Get Started</div>
         <div className="match__menu">

@@ -17,5 +17,6 @@
     height: 450px;
     border-radius: 10px;
     @include mdShadowLevel(2);
+    transform-origin: 50% 80%;
   }
 }

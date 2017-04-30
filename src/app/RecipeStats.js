@@ -9,7 +9,7 @@ class RecipeStats extends Component {
     this.onSwipe = this.onSwipe.bind(this);
     this.onPan = this.onPan.bind(this);
     this.transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
-    this.paneWidth = 384;
+    this.paneWidth = 354;
     this.currentPane = 0;
     this.paneCount = 0;
     this.options = {
@@ -110,13 +110,13 @@ class RecipeStats extends Component {
           <div className="recipestats">
             <ul>
               <li className="recipestat">
-                <img src="http://placehold.it/384x200/ff0000/black" alt="carousel 1" />
+                <img src="img/stats-1.jpg" alt="carousel 1" />
               </li>
               <li className="recipestat">
-                <img src="http://placehold.it/384x200/ff00ff/black" alt="carousel 1" />
+                <img src="img/stats-2.jpg" alt="carousel 2" />
               </li>
               <li className="recipestat">
-                <img src="http://placehold.it/384x200/ffff00/black" alt="carousel 1" />
+                <img src="img/stats-3.jpg" alt="carousel 3" />
               </li>
             </ul>
           </div>
