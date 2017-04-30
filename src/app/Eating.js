@@ -3,6 +3,7 @@ import Hammer from 'react-hammerjs';
 
 import Messages from './Messages';
 import Discussion from './Discussion';
+import DiscMessage from './DiscMessage';
 
 class Eating extends Component {
   constructor(props) {
@@ -108,6 +109,7 @@ class Eating extends Component {
   render() {
     return (
       <div className="container">
+        <DiscMessage />
         <div className="messages__header">
           <h1 className="messages__heading">Harissa Vegetable and egg tray bake</h1>
           <div className="messages__detail messages__detail--clock">Est. eat time 7pm</div>

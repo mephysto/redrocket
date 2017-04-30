@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import CardProfile from './CardProfile';
+import DiscMessage from './DiscMessage';
 class MatchDetail extends Component {
   constructor(props) {
     super(props);
@@ -13,6 +14,7 @@ class MatchDetail extends Component {
   render() {
     return (
       <div className="container match__container">
+        <DiscMessage />
         <h1 className="match__heading">It's a Match!</h1>
         <div className="matches">
           <CardProfile image="img/emma.jpg" name="Emma" rating="4.45"/>

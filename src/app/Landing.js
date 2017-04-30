@@ -4,6 +4,8 @@ import GSAP from 'react-gsap-enhancer';
 import {TimelineMax} from 'gsap';
 import {Power0, Power4} from 'gsap';
 
+import DiscMessage from './DiscMessage';
+
 class Landing extends Component {
   constructor(props) {
     super(props);
@@ -31,6 +33,7 @@ class Landing extends Component {
     return (
       <div className="landing-page" onClick={this.toNextPage}>
         
+        <DiscMessage />
         <div className="landing-page__top">
           <div className="landing-page__slide"></div>
         </div>

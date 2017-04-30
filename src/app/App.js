@@ -6,8 +6,6 @@ import Landing from './Landing';
 import Stack from './Stack';
 import MatchDetail from './MatchDetail';
 import Eating from './Eating';
-import Detail from './Detail';
-import Things from './Things';
 
 // import logo from '../logo.svg';
 import '../styles/global.min.css';
@@ -22,9 +20,7 @@ class App extends Component {
           <Route path="/Landing" component={Landing} />
           <Route path="/Stack" component={Stack} />
           <Route path="/match" component={MatchDetail} />
-          <Route path="/detail" component={Detail} />
           <Route path="/Eating" component={Eating} />
-          <Route path="/things" component={Things} />
         </div>
       </Router>
     );

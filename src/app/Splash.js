@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import DiscMessage from './DiscMessage';
+
 class Splash extends Component {
   constructor(props) {
     super(props);
@@ -18,6 +20,7 @@ class Splash extends Component {
   render() {
     return (
       <div className="splash" onClick={this.toNextPage}>
+        <DiscMessage />
       </div>
     );
   }

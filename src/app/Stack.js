@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import CardProfile from './CardProfile';
 import RecipeStats from './RecipeStats';
+import DiscMessage from './DiscMessage';
 
 class Stack extends Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class Stack extends Component {
   render() {
     return (
       <div>
+        <DiscMessage />
         <Header />
         <main className="tinderforbananas">
           <section className="view view--swipelist">
