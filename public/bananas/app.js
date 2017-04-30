@@ -7,42 +7,46 @@
       price: '$13',
       age: 25,
       job: 'Phillippines',
-      images: ['images/tray-bake.jpg', 'images/tray-bake.jpg', 'images/tray-bake.jpg'],
+      images: ['images/tray-bake.jpg'],
+      profile: ['img/emma.jpg'],
       distance: 25,
-      description: 'Swipe for me! You’ll find me very ap-peel-ing'
+      description: 'Tasty!'
     },
     {
       id: 1,
-      name: 'Harissa Vegetable and egg tray bake',
+      name: 'Indian Spiced Cauliflower Pilaf with Salmon',
       time: 'Est. eat time 7pm',
-      price: '$13',
+      price: '$39',
       age: 28,
       job: 'Nicaragua',
-      images: ['images/tray-bake.jpg', 'images/tray-bake.jpg'],
+      images: ['images/food-1.jpg'],
+      profile: ['img/katy.jpg'],
       distance: 4,
-      description: 'Lorem ipsum dolor sit amet, quo ad cibo viris legimus, simul delicata constituto per cu. Pro an commodo liberavisse, cu mutat sensibus tractatos est, animal similique ei nec. Et est molestie phaedrum, ut eam quot meliore. Usu hendrerit complectitur at, at iriure habemus facilisis sit. An eos probo graece.Propriae contentiones eu ius, pro eu ignota liberavisse disputationi, duo ea docendi consectetuer. Cum posse semper ea, ius invidunt qualisque scriptorem cu, ullum reprehendunt pro eu. Illud erant reformidans usu in. Ad vim quem choro iracundia. Ius in case mnesarchum.Duis signiferumque sed cu. Ut duo error congue intellegebat, fugit nostrud urbanitas ei has. Copiosae dissentias te eam, dicta efficiendi mea ad. Numquam persequeris te sea, ad populo graeci per, et mea aperiam noluisse interesset.Malorum abhorreant pri eu, no vidit quaeque mei, usu in dico meliore philosophia. Causae verterem pri in, te case suavitate nam. In ius ignota sanctus. Propriae repudiandae ad sit, gubergren ullamcorper usu ei. Ne vis fierent mediocritatem. Id nominati maluisset ius, soluta graece lobortis ut his, vocibus copiosae placerat est ad.Duo alia ferri impetus ei, deleniti scriptorem comprehensam ius an. Mea ne labore oblique adolescens. Ne velit albucius salutatus quo, cum iudico eripuit bonorum ad. Stet suscipit sea ad. Nec prompta suscipit mandamus at.'
+      description: 'Yum!.'
     },
     {
       id: 2,
-      name: 'Harissa Vegetable and egg tray bake',
+      name: 'Persian Baked Eggs With Lentils',
       time: 'Est. eat time 7pm',
-      price: '$13',
+      price: '$12',
       age: 21,
       job: 'Finnland',
-      images: ['images/tray-bake.jpg', 'images/tray-bake.jpg'],
+      images: ['images/food-2.jpg'],
+      profile: ['img/leah.jpg'],
       distance: 9,
       description: 'I like fruits!'
     },
     {
       id: 3,
-      name: 'Harissa Vegetable and egg tray bake',
+      name: 'Rosemary Garlic Steak with Asparagus',
       time: 'Est. eat time 7pm',
-      price: '$13',
+      price: '$15',
       age: 12,
       job: 'Scammer',
-      images: ['images/tray-bake.jpg', 'images/tray-bake.jpg'],
+      images: ['images/food-3.jpg'],
+      profile: ['img/anne.png'],
       distance: 2455,
-      description: 'Follow me on my totally banana-related Instagram 📸'
+      description: 'STEAK!'
     }
   ];
 
@@ -208,7 +212,7 @@
 
   function installServiceWorker() {
     if (!('serviceWorker' in navigator)) return;
-    navigator.serviceWorker.register('./sw.js');
+    // navigator.serviceWorker.register('./sw.js');
   }
 
   function init() {
