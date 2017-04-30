@@ -8,18 +8,20 @@
       age: 25,
       job: 'Phillippines',
       images: ['images/tray-bake.jpg'],
+      person: 'Emma',
       profile: ['img/emma.jpg'],
       distance: 25,
       description: 'Tasty!'
     },
     {
       id: 1,
-      name: 'Indian Spiced Cauliflower Pilaf with Salmon',
+      name: 'Indian Spiced Cauliflower Pilaf',
       time: 'Est. eat time 7pm',
       price: '$39',
       age: 28,
       job: 'Nicaragua',
       images: ['images/food-1.jpg'],
+      person: 'Katy',
       profile: ['img/katy.jpg'],
       distance: 4,
       description: 'Yum!.'
@@ -32,6 +34,7 @@
       age: 21,
       job: 'Finnland',
       images: ['images/food-2.jpg'],
+      person: 'Leah',
       profile: ['img/leah.jpg'],
       distance: 9,
       description: 'I like fruits!'
@@ -44,6 +47,7 @@
       age: 12,
       job: 'Scammer',
       images: ['images/food-3.jpg'],
+      person: 'Anneliese',
       profile: ['img/anne.png'],
       distance: 2455,
       description: 'STEAK!'

@@ -59,6 +59,7 @@ customElements.define('tinderforbananas-item', class extends HTMLElement {
     this.querySelector('.card__heading').textContent = `${this.data.name}`;
     this.querySelector('.card__detail--clock').textContent = `${this.data.time}`;
     this.querySelector('.card__detail--user').textContent = `${this.data.price}`;
+    this.querySelector('.profile__name').textContent = `${this.data.person}`;
     this.querySelector('.profile__image').style.backgroundImage = `url(${this.data.profile})`;
 
 
