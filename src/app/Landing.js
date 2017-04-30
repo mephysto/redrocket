@@ -12,6 +12,7 @@ class Landing extends Component {
     // this.moveAnimation = this.moveAnimation.bind(this);
   }
   componentDidMount() {
+    window.scrollTo(0,1);
     new TimelineMax({
       repeat: -1
     })

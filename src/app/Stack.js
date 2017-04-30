@@ -24,6 +24,7 @@ class Stack extends Component {
     window.location = '/match';
   }
   componentDidMount() {
+    window.scrollTo(0,1);
     document.body.appendChild(this.createScript("bananas/custom-elements.min.js"));
     document.body.appendChild(this.createScript("bananas/helper.js"));
     document.body.appendChild(this.createScript("bananas/ce-item.js"));

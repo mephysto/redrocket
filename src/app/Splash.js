@@ -7,6 +7,9 @@ class Splash extends Component {
     };
     this.toNextPage = this.toNextPage.bind(this);
   }
+  componentDidMount() {
+    window.scrollTo(0,1);
+  }
 
   toNextPage(){
     console.log('cicked');

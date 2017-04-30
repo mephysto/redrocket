@@ -13,6 +13,7 @@ import Things from './Things';
 import '../styles/global.min.css';
 
 class App extends Component {
+  
   render() {
     return (
       <Router>
