@@ -8,7 +8,9 @@ class Header extends Component {
   }
   render() {
     return (
-      <div className="header"></div>
+      <div className="header">
+        <img src="img/logo.png" alt="Taste Buds" />
+      </div>
     );
   }
 }

@@ -84,7 +84,7 @@ class Stack extends Component {
               <tinderforbananas-carousel></tinderforbananas-carousel>
               {/* profile imags will go here */}
               <section className="item__details full-detail">
-                <CardProfile image="img/emma.jpg"  onClick={this.refreshpage} />
+                <CardProfile image="img/emma.jpg" onClick={this.refreshpage} />
                 <CardProfile image="img/cross.png" onClick={this.toMatchPage} />
               </section>
               {/* sustainability data here*/}
@@ -92,6 +92,16 @@ class Stack extends Component {
             </tinderforbananas-details>
           </section>
         </main>
+        <div className="searchBar">
+          <div className="searchBar__wrapper">
+            <div className="search-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 451 451" width="451" height="451">
+                <path d="M447.05,428l-109.6-109.6c29.4-33.8,47.2-77.9,47.2-126.1C384.65,86.2,298.35,0,192.35,0C86.25,0,0.05,86.3,0.05,192.3s86.3,192.3,192.3,192.3c48.2,0,92.3-17.8,126.1-47.2L428.05,447c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4C452.25,441.8,452.25,433.2,447.05,428z M26.95,192.3c0-91.2,74.2-165.3,165.3-165.3c91.2,0,165.3,74.2,165.3,165.3s-74.1,165.4-165.3,165.4C101.15,357.7,26.95,283.5,26.95,192.3z" />
+              </svg>
+            </div>
+            <input type="text" placeholder="What are you craving?"/>
+          </div>
+        </div>
       </div>
     );
   }
