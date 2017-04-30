@@ -13,12 +13,12 @@ class Discussion extends Component {
   componentDidMount() {
     console.log('init aimation');
     this.animation = new TimelineMax()
-      .fromTo('.dcard__card_1', 1, {x:0, y:0, rotation:0, scale:1}, {x:500, rotation:20, scale: 0.8, y:-200, ease: Power2.easeInOut}, 0)
-      .fromTo('.dcard__card_2', 1, {x:0, y:0, rotation:0, scale:1}, {x:500, rotation:20, scale: 0.8, y:-200, ease: Power2.easeInOut}, "+=0.5")
-      .fromTo('.dcard__card_3', 1, {x:0, y:0, rotation:0, scale:1}, {x:500, rotation:20, scale: 0.8, y:-200, ease: Power2.easeInOut}, "+=0.5")
-      .fromTo('.dcard__card_4', 1, {x:0, y:0, rotation:0, scale:1}, {x:500, rotation:20, scale: 0.8, y:-200, ease: Power2.easeInOut}, "+=0.5")
-      .fromTo('.dcard__card_5', 1, {x:0, y:0, rotation:0, scale:1}, {x:500, rotation:20, scale: 0.8, y:-200, ease: Power2.easeInOut}, "+=0.5")
-      .add(TweenMax.staggerTo('.dcard__card', 1.5, { x:0, rotation:0, scale:1, y:0, ease: Power2.easeInOut }, 0.25),  "+=1.5")
+      .fromTo('.dcard__card_1', 1, {x:0, y:0, z:0, rotation:0, scale:1},    {x:500, rotation:20, scale: 0.8, y:-200, ease: Power2.easeInOut}, 0)
+      .fromTo('.dcard__card_2', 1, {x:0, y:4, z:-5, rotation:0, scale:1},   {x:500, rotation:20, scale: 0.8, y:-200, ease: Power2.easeInOut}, "+=0.5")
+      .fromTo('.dcard__card_3', 1, {x:0, y:8, z:-10, rotation:0, scale:1},  {x:500, rotation:20, scale: 0.8, y:-200, ease: Power2.easeInOut}, "+=0.5")
+      .fromTo('.dcard__card_4', 1, {x:0, y:12, z:-15, rotation:0, scale:1}, {x:500, rotation:20, scale: 0.8, y:-200, ease: Power2.easeInOut}, "+=0.5")
+      .fromTo('.dcard__card_5', 1, {x:0, y:16, z:-20, rotation:0, scale:1}, {x:500, rotation:20, scale: 0.8, y:-200, ease: Power2.easeInOut}, "+=0.5")
+      .add(TweenMax.staggerTo('.dcard__card', 1.5, { x:0, rotation:0, scale:1, y:0, ease: Power2.easeInOut }, 0.25),  "+=1")
       .pause(0)
     ;
   }

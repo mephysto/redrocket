@@ -6,6 +6,7 @@
 .dcard__stack{
   position: relative;
   width: 375px;
+  perspective: 800px;
   > div{
     position: absolute;
     top: 0;
