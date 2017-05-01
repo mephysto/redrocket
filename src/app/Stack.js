@@ -19,10 +19,12 @@ class Stack extends Component {
     return script;
   }
   refreshpage() {
-    window.location = '/stack';
+    // window.location = '/stack';
+    window.location = '/taste-buddy/stack';
   }
   toMatchPage() {
-    window.location = '/match';
+    // window.location = '/match';
+    window.location = '/taste-buddy/match';
   }
   componentDidMount() {
     window.scrollTo(0,1);

@@ -27,7 +27,8 @@ class Landing extends Component {
     ;
   }
   toNextPage(){
-    window.location = '/stack';
+    // window.location = '/stack';
+    window.location = '/taste-buddy/stack';
   }
   render() {
     return (

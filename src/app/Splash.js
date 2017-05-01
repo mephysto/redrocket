@@ -14,8 +14,9 @@ class Splash extends Component {
   }
 
   toNextPage(){
-    console.log('cicked');
-    window.location = '/landing';
+    // console.log('cicked');
+    // window.location = '/landing';
+    window.location = '/taste-buddy/landing';
   }
   render() {
     return (

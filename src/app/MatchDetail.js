@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import CardProfile from './CardProfile';
 import DiscMessage from './DiscMessage';
+
 class MatchDetail extends Component {
   constructor(props) {
     super(props);
@@ -9,7 +10,8 @@ class MatchDetail extends Component {
     };
   }
   toNextPage(){
-    window.location = '/eating';
+    // window.location = '/eating';
+    window.location = '/taste-buddy/eating';
   }
   render() {
     return (
