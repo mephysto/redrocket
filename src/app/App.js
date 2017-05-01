@@ -16,11 +16,11 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Route exact path="/" component={Splash} />
-          <Route path="/Landing" component={Landing} />
-          <Route path="/Stack" component={Stack} />
-          <Route path="/match" component={MatchDetail} />
-          <Route path="/Eating" component={Eating} />
+          <Route exact path="/taste-buddy/" component={Splash} />
+          <Route path="/taste-buddy/landing" component={Landing} />
+          <Route path="/taste-buddy/stack" component={Stack} />
+          <Route path="/taste-buddy/match" component={MatchDetail} />
+          <Route path="/taste-buddy/Eating" component={Eating} />
         </div>
       </Router>
     );
