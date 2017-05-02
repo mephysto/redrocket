@@ -20,11 +20,13 @@ class Stack extends Component {
   }
   refreshpage() {
     // window.location = '/stack';
-    window.location = '/taste-buddy/stack';
+    // window.location = '/taste-buddy/stack';
+    window.location.hash = 'stack';
   }
   toMatchPage() {
     // window.location = '/match';
-    window.location = '/taste-buddy/match';
+    // window.location = '/taste-buddy/match';
+    window.location.hash = 'match';
   }
   componentDidMount() {
     window.scrollTo(0,1);

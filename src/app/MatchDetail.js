@@ -11,7 +11,8 @@ class MatchDetail extends Component {
   }
   toNextPage(){
     // window.location = '/eating';
-    window.location = '/taste-buddy/eating';
+    // window.location = '/taste-buddy/eating';
+    window.location.hash = 'eating';
   }
   render() {
     return (

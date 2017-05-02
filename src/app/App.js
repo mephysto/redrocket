@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Splash from './Splash';
 import Landing from './Landing';
@@ -16,11 +17,11 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Route exact path="/taste-buddy/" component={Splash} />
-          <Route path="/taste-buddy/landing" component={Landing} />
-          <Route path="/taste-buddy/stack" component={Stack} />
-          <Route path="/taste-buddy/match" component={MatchDetail} />
-          <Route path="/taste-buddy/Eating" component={Eating} />
+          <Route exact path="/" component={Splash} />
+          <Route path="/landing" component={Landing} />
+          <Route path="/stack" component={Stack} />
+          <Route path="/match" component={MatchDetail} />
+          <Route path="/eating" component={Eating} />
         </div>
       </Router>
     );
